@@ -1,12 +1,11 @@
 import {Router} from 'express'
+import { getProductsById } from './productController';
 
 const router = Router();
 
 
 
-router.get('/', (req, res) => {
-  res.send('List of products!')
-})
+router.get('/', getProductsById)
 
 router.post('/', (req, res) => {
   res.send('New products created!')
